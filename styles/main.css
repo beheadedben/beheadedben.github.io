@@ -211,6 +211,9 @@
   .w-full {
     width: 100%;
   }
+  .columns-1 {
+    columns: 1;
+  }
   .grid-flow-row {
     grid-auto-flow: row;
   }
@@ -228,6 +231,13 @@
       --tw-space-y-reverse: 0;
       margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
       margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-8 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 8) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 8) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .space-y-10 {
@@ -349,6 +359,11 @@
   .lg\:w-\[50\%\] {
     @media (width >= 64rem) {
       width: 50%;
+    }
+  }
+  .lg\:columns-2 {
+    @media (width >= 64rem) {
+      columns: 2;
     }
   }
   .lg\:grid-cols-2 {
