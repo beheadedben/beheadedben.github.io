@@ -7,10 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-600: oklch(57.7% 0.245 27.325);
+    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
     --color-blue-700: oklch(48.8% 0.243 264.376);
-    --color-zinc-200: oklch(92% 0.004 286.32);
+    --color-zinc-600: oklch(44.2% 0.017 285.786);
     --color-zinc-700: oklch(37% 0.013 285.805);
     --color-zinc-800: oklch(27.4% 0.006 286.033);
     --color-white: #fff;
@@ -175,6 +175,9 @@
   .col-\[40\%\] {
     grid-column: 40%;
   }
+  .float-right {
+    float: right;
+  }
   .m-auto {
     margin: auto;
   }
@@ -186,6 +189,9 @@
   }
   .ml-5 {
     margin-left: calc(var(--spacing) * 5);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
   }
   .flex {
     display: flex;
@@ -202,6 +208,9 @@
   .h-\[30px\] {
     height: 30px;
   }
+  .h-\[35px\] {
+    height: 35px;
+  }
   .h-\[50px\] {
     height: 50px;
   }
@@ -216,6 +225,12 @@
   }
   .w-full {
     width: 100%;
+  }
+  .list-inside {
+    list-style-position: inside;
+  }
+  .list-\[circle\] {
+    list-style-type: circle;
   }
   .columns-1 {
     columns: 1;
@@ -278,8 +293,8 @@
   .border-blue-700 {
     border-color: var(--color-blue-700);
   }
-  .border-red-600 {
-    border-color: var(--color-red-600);
+  .border-red-500 {
+    border-color: var(--color-red-500);
   }
   .border-yellow-500 {
     border-color: var(--color-yellow-500);
@@ -292,12 +307,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-zinc-200 {
-    background-color: var(--color-zinc-200);
-  }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -314,6 +323,9 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
+  .pb-8 {
+    padding-bottom: calc(var(--spacing) * 8);
+  }
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -328,11 +340,14 @@
   .text-blue-700 {
     color: var(--color-blue-700);
   }
-  .text-red-600 {
-    color: var(--color-red-600);
+  .text-red-500 {
+    color: var(--color-red-500);
   }
   .text-yellow-500 {
     color: var(--color-yellow-500);
+  }
+  .text-zinc-600 {
+    color: var(--color-zinc-600);
   }
   .text-zinc-800 {
     color: var(--color-zinc-800);
@@ -351,6 +366,13 @@
   }
   .opacity-50 {
     opacity: 50%;
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
   }
   .sm\:flex {
     @media (width >= 40rem) {
